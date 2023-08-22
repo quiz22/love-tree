@@ -192,7 +192,8 @@
 
             var textAnimate = eval(Jscex.compile("async", function () {
                 var together = new Date();
-                together.setFullYear(2001, 02, 25);
+                //注意，此处实际月份需要-1， setFullYear的month参数用本地时间表示。介于 0 到 11 之间的整数值，表示从一月到十二月。
+                together.setFullYear(2023, 5-1, 16);
                 together.setHours(0);
                 together.setMinutes(0);
                 together.setSeconds(0);
